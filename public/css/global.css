@@ -21,6 +21,16 @@
   height: 70px;
 }
 
+.new_character_logo:hover {
+  width: 330px;
+  height: 90px;
+}
+
+.home_page_logo:hover {
+  width: 330px;
+  height: 90px;
+}
+
 .create_character_logo {
   margin-left: 580px;
   width: 300px;
