@@ -1,0 +1,26 @@
+<div class="form">
+  <form class="" action="/<%= @character.id %>" method="POST">
+    <div class="">
+      <label>Name</label>
+      <input class="box" type="text" name="name" placeholder="Enter character name" value="<%= @character.name %>">
+    </div><br>
+    <div class="">
+      <label>Signature</label>
+      <textarea class="box" name="signature" placeholder="Enter the name of their signature attack"><%= @character.signature %></textarea>
+    </div>
+
+    <div class="">
+      <label>Arc</label>
+      <textarea class="box" name="arc" placeholder="Enter the name of the arc where they first appeared"><%= @character.arc %></textarea>
+    </div>
+
+    <div class="">
+      <input class="button"type="submit" name="" value="Save Character">
+    </div>
+
+    <% if(@character.id != "") %>
+      <input type="hidden" name="_method" value="PUT">
+    <% end %>
+
+  </form>
+</div>

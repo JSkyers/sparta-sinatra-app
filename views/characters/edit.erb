@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="../css/global.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/global.js"></script>
+<div class="">
+  <img class="title" src="../images/title.png" alt="">
+</div>
+  <div class="logos">
+    <a href="/">
+      <img class="home_page_logo"src="../images/characters.png">
+    </a>
+  </div>
+  <div class="logos">
+    <a href="/new">
+      <img class="new_character_logo" src="../images/new_character.png">
+    </a>
+  </div>
+<div class="logos">
+  <img class="edit_character_logo" src="../images/edit.png">
+</div>
+<div class="form">
+  <form class="" action="/<%= @character.id %>" method="POST">
+    <div class="">
+      <label>Name</label>
+      <input class="box" type="text" name="name" placeholder="Enter character name" value="<%= @character.name %>">
+    </div><br>
+
+    <div class="">
+      <label>Signature</label>
+      <textarea class="box" name="signature" placeholder="Enter the name of their signature attack"><%= @character.signature %></textarea>
+    </div>
+
+    <div class="">
+      <label>Arc</label>
+      <textarea class="box" name="arc" placeholder="Enter the name of the arc where they first appeared"><%= @character.arc %></textarea>
+    </div>
+
+    <div class="">
+      <input class="button"type="submit" name="" value="Save Character">
+    </div>
+
+    <% if(@character.id != "") %>
+      <input type="hidden" name="_method" value="PUT">
+    <% end %>
+  </form>
+</div>
